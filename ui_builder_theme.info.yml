@@ -1,6 +1,6 @@
 name: UI Builder Theme
 type: theme
-description: 'A minimal, unopinionated starter theme perfectly optimized for the UI Builder module.'
+description: 'A minimal front-end starter theme for the UI Builder module. Note: This theme is designed strictly for the front-end and should not be set as the Administration theme.'
 core_version_requirement: ^9 || ^10 || ^11
 base theme: false
 

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - core
+  theme:
+    - ui_builder_theme
+id: ui_builder_theme_local_tasks
+theme: ui_builder_theme
+region: content
+weight: -10
+provider: core
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {}

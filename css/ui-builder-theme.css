@@ -217,7 +217,7 @@ body {
 .ui-builder-injected-header {
   background-color: var(--uib-surface);
   border-bottom: 2px solid var(--uib-border);
-  padding: 1rem 2rem;
+  padding: 0 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -239,7 +239,7 @@ body {
 }
 
 .ui-builder-injected-header img {
-  max-height: 40px;
+  max-height: 80px;
   filter: grayscale(100%) contrast(1.2);
 }
 
@@ -271,7 +271,7 @@ body {
  * PRIMARY TABS (Technical Controls)
  * -------------------------------------------------------------------------- */
 nav.tabs {
-  margin: 2rem 0 0 0;
+  margin: 0;
 }
 
 nav.tabs ul {
@@ -301,6 +301,7 @@ nav.tabs ul li a {
   text-decoration: none;
   border: 2px solid var(--uib-border);
   border-bottom: none;
+  border-top: 0;
   background: var(--uib-bg);
   transition: all 0.15s ease;
   margin-right: -2px; /* Overlap right borders */
@@ -329,6 +330,17 @@ nav.tabs ul li.is-active a {
  * -------------------------------------------------------------------------- */
 .uib-highlighted {
   margin: 2rem 0 0 2rem;
+}
+
+#ui-builder-messages,
+.ui-builder-messages,
+#block-ui-builder-theme-messages {
+  padding: 18px 3rem 0;
+}
+
+#block-ui-builder-theme-local-tasks,
+.block-ui-builder-theme-local-tasks {
+  padding: 0 3rem;
 }
 
 .messages {

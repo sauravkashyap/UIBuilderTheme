@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ui_builder_theme
+id: ui_builder_theme_branding
+theme: ui_builder_theme
+region: header
+weight: -5
+provider: system
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {}

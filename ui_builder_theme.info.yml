@@ -1,0 +1,20 @@
+name: UI Builder Theme
+type: theme
+description: 'A minimal, unopinionated starter theme perfectly optimized for the UI Builder module.'
+core_version_requirement: ^9 || ^10 || ^11
+base theme: false
+
+libraries:
+  - ui_builder_theme/global-styling
+
+regions:
+  header: 'Header'
+  primary_menu: 'Primary Menu'
+  secondary_menu: 'Secondary Menu'
+  breadcrumb: 'Breadcrumb'
+  highlighted: 'Highlighted (Messages)'
+  content: 'Main Content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'

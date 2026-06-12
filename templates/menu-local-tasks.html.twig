@@ -1,0 +1,12 @@
+{% if primary %}
+  <nav class="tabs" role="navigation" aria-label="Tabs">
+    <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
+    <ul class="tabs primary">{{ primary }}</ul>
+  </nav>
+{% endif %}
+{% if secondary %}
+  <nav class="tabs secondary-tabs" role="navigation" aria-label="Tabs">
+    <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
+    <ul class="tabs secondary">{{ secondary }}</ul>
+  </nav>
+{% endif %}

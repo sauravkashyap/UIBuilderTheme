@@ -1,0 +1,6 @@
+global-styling:
+  version: 1.22
+  css:
+    base:
+      css/ui-builder-base.css: { weight: -100 }
+      css/ui-builder-theme.css: { weight: -90 }

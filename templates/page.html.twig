@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Theme override to display a single page.
+ */
+#}
+<div class="uib-page min-h-screen flex flex-col">
+  {% if page.header or page.primary_menu or page.secondary_menu %}
+    <header class="uib-header border-b border-gray-200 p-4">
+      {{ page.header }}
+      {{ page.primary_menu }}
+      {{ page.secondary_menu }}
+    </header>
+  {% endif %}
+
+  {% if page.breadcrumb %}
+    <div class="uib-breadcrumb px-4 py-2 bg-gray-50">
+      {{ page.breadcrumb }}
+    </div>
+  {% endif %}
+
+  {% if page.highlighted %}
+    <div class="uib-highlighted">
+      {{ page.highlighted }}
+    </div>
+  {% endif %}
+
+  <main class="uib-main flex-grow flex flex-col md:flex-row">
+    {% if page.sidebar %}
+      <aside class="uib-sidebar w-full md:w-64 border-r border-gray-200 p-4 shrink-0">
+        {{ page.sidebar }}
+      </aside>
+    {% endif %}
+
+    <div class="uib-content flex-grow">
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+      {{ page.content }}
+    </div>
+  </main>
+
+  {% if page.footer %}
+    <footer class="uib-footer border-t border-gray-200 p-4 mt-auto">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+</div>

@@ -214,8 +214,8 @@ body {
 /* --------------------------------------------------------------------------
  * HEADER (Utilitarian)
  * -------------------------------------------------------------------------- */
-.ui-builder-injected-header {
-  background-color: var(--uib-surface);
+.uib-header {
+  background-color: #fafafa;
   border-bottom: 2px solid var(--uib-border);
   padding: 0 3rem;
   display: flex;
@@ -223,11 +223,18 @@ body {
   justify-content: space-between;
 }
 
-.ui-builder-injected-header .uib-block {
+.ui-builder-node-edit .uib-header,
+.ui-builder-node-edit .uib-footer,
+.ui-builder-node-add .uib-header,
+.ui-builder-node-add .uib-footer {
+  display: none;
+}
+
+.uib-header .uib-block {
   margin: 0;
 }
 
-.ui-builder-injected-header a {
+.uib-header a {
   text-decoration: none;
   color: var(--uib-text);
   font-weight: 700;
@@ -238,12 +245,12 @@ body {
   gap: 0.75rem;
 }
 
-.ui-builder-injected-header img {
+.uib-header img {
   max-height: 80px;
   filter: grayscale(100%) contrast(1.2);
 }
 
-.ui-builder-injected-header nav ul:not(.contextual-links) {
+.uib-header nav ul:not(.contextual-links) {
   display: flex;
   gap: 2rem;
   list-style: none;
@@ -251,7 +258,7 @@ body {
   padding: 0;
 }
 
-.ui-builder-injected-header nav ul:not(.contextual-links) li a {
+.uib-header nav ul:not(.contextual-links) li a {
   font-family: var(--uib-font-mono);
   font-size: 0.85rem;
   font-weight: 700;
@@ -261,8 +268,8 @@ body {
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.ui-builder-injected-header nav ul:not(.contextual-links) li a:hover,
-.ui-builder-injected-header nav ul:not(.contextual-links) li a.is-active {
+.uib-header nav ul:not(.contextual-links) li a:hover,
+.uib-header nav ul:not(.contextual-links) li a.is-active {
   border-bottom-color: var(--uib-border);
   color: var(--uib-border);
 }
@@ -282,7 +289,15 @@ nav.tabs ul {
   padding: 0;
   margin: 0;
   gap: 0;
-  border-bottom: 2px solid var(--uib-border);
+  border-bottom: 0;
+}
+
+.ui-builder-node-edit nav.tabs ul {
+  margin: 25px 0 0 0;
+}
+
+.ui-builder-active-page nav.tabs ul {
+  margin: 0 0 0 2px;
 }
 
 nav.tabs ul li {
@@ -307,8 +322,13 @@ nav.tabs ul li a {
   margin-right: -2px; /* Overlap right borders */
 }
 
+nav.tabs ul li:first-child a {
+  border-left: 0;
+}
+
 nav.tabs ul li:last-child a {
   margin-right: 0;
+  border-right: 0;
 }
 
 nav.tabs ul li a:hover {
@@ -328,26 +348,17 @@ nav.tabs ul li.is-active a {
 /* --------------------------------------------------------------------------
  * MESSAGES (High-Visibility Alerts)
  * -------------------------------------------------------------------------- */
-.uib-highlighted {
-  margin: 2rem 0 0 2rem;
-}
-
-#ui-builder-messages,
-.ui-builder-messages,
-#block-ui-builder-theme-messages {
-  padding: 18px 3rem 0;
-}
 
 #block-ui-builder-theme-local-tasks,
 .block-ui-builder-theme-local-tasks {
-  padding: 0 3rem;
+  padding: 0;
 }
 
 .messages {
   font-family: var(--uib-font-mono);
   font-size: 0.85rem;
   padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
+  margin: 18px 3rem 1rem 3rem;
   border: 1px solid var(--uib-border);
   border-left: 6px solid var(--uib-border);
   background-color: var(--uib-surface);
@@ -357,6 +368,12 @@ nav.tabs ul li.is-active a {
 
 .messages--status {
   border-left-color: var(--uib-success);
+}
+
+.uib-highlighted .messages.messages--status {
+  margin: 30px 0 0 0;
+  border-top: 0;
+  border-bottom: 0;
 }
 
 .messages--error {
@@ -457,16 +474,17 @@ button.trigger.visually-hidden {
 /* --------------------------------------------------------------------------
  * MAIN CONTENT AREA
  * -------------------------------------------------------------------------- */
-.uib-highlighted,
 .uib-content {
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-bottom: 3rem;
+  padding: 0;
 }
 
-.uib-highlighted {
-  padding-top: 3rem;
-  padding-bottom: 0; /* So it sits nicely above content */
+.ui-builder-node-add .uib-main {
+  margin-top: 2rem;
+}
+
+.ui-builder-node-add .uib-content,
+.ui-builder-node-add .uib-highlighted {
+  padding: 0 3rem;
 }
 
 /* --------------------------------------------------------------------------
